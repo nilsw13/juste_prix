@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <stdlib.h>
+
 int main()
 {
     int continue_choice = 0;
@@ -7,26 +10,35 @@ int main()
     const int MAX_TENTATIVES = 0;
 
 
+
+
+
+
+
     // boucle du jeu
 
     do
     {
-        // gÃ©nÃ©ration d'un nomnre alÃ©atoire
+        // génération d'un nomnre aléatoire
        srand(time(NULL));
        nombre_mystere = (rand()% (MAX_VAL-MIN_VAL +1)) + MIN_VAL;
 
        // Initialisation du nombre de tentatives
        int nb_tentatives = 10;
 
+
+
+
         // consignes
-      
         printf("\t \t \t \t \t \t ----------Jouons au juste prix ----------\n \n");
         printf("\t \t\t  Entrez un nombre entre 1 et 100 si vous tombez sur le juste prix c'est gagner ! \n");
         printf("%d", nombre_mystere);
         do
         {
 
-            // Comparaisons du nombre de l'utilisateur avec le nombre mystÃ¨re
+
+            // Comparaisons du nombre de l'utilisateur avec le nombre mystère
+
 
 
              if (nb_tentatives <= MAX_TENTATIVES)
@@ -59,11 +71,11 @@ int main()
                  printf("C'est plus ! tentatives restantes : %d \n", nb_tentatives);
              }
              else
-             {
+            {
                  printf("Felicitations !!! mais y'avait rien a gagner dsl \n");
                  break;
 
-             }
+            }
 
         }while (nombre_mystere != nombre_utilisateur);
 
@@ -81,3 +93,5 @@ int main()
 
     return 0;
 }
+
+
