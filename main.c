@@ -32,7 +32,7 @@ int main()
         // consignes
         printf("\t \t \t \t \t \t ----------Jouons au juste prix ----------\n \n");
         printf("\t \t\t  Entrez un nombre entre 1 et 100 si vous tombez sur le juste prix c'est gagner ! \n");
-        printf("%d", nombre_mystere);
+        
         do
         {
 
