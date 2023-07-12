@@ -19,11 +19,11 @@ int main()
 
     do
     {
-        // génération d'un nomnre aléatoire
+        // gÃ©nÃ©ration d'un nombre alÃ©atoire
        srand(time(NULL));
        nombre_mystere = (rand()% (MAX_VAL-MIN_VAL +1)) + MIN_VAL;
 
-       // Initialisation du nombre de tentatives
+       // Initialisation du nombre de tentatives autorisÃ©es
        int nb_tentatives = 10;
 
 
@@ -37,8 +37,7 @@ int main()
         {
 
 
-            // Comparaisons du nombre de l'utilisateur avec le nombre mystère
-
+            // Comparaisons du nombre de l'utilisateur avec le nombre mystÃ¨re
 
 
              if (nb_tentatives <= MAX_TENTATIVES)
@@ -72,7 +71,7 @@ int main()
              }
              else
             {
-                 printf("Felicitations !!! mais y'avait rien a gagner dsl \n");
+                 printf("Felicitations !!! Vous avez trouvÃ© ! \n");
                  break;
 
             }
