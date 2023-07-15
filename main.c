@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
+// fonction REGLES
+
 void regles()
 {
     int back_menu;
@@ -14,17 +17,17 @@ void regles()
     printf("Le jeu fournit ensuite un indice au joueur pour l'aider a affiner sa prochaine proposition.\n\n");
     printf("Indices fournis par le jeu :\n\n");
     printf("Si la proposition du joueur est exacte et correspond au nombre mystere, le joueur a gagne !\n");
-    printf("Si la proposition est moins elevee que le nombre mystère, le jeu indique \"c'est moins\" \n");
-    printf("Si la proposition est plus elevee que le nombre mystère, le jeu indique \"c'est plus\" \n\n");
+    printf("Si la proposition est moins elevee que le nombre mystÃ¨re, le jeu indique \"c'est moins\" \n");
+    printf("Si la proposition est plus elevee que le nombre mystÃ¨re, le jeu indique \"c'est plus\" \n\n");
     printf("Continuite du jeu :\n\n");
-    printf("Le joueur continue de faire des propositions jusqu'a ce qu'il trouve le nombre mystère, ou qu'il abandonne, car le programme propose a partir de 100 tentatives d'abandonner a chaque nouvelle mauvaise proposition(mode sans limites de tentatives) ou atteigne le nombre maximum de tentatives autorisees (mode avec limites de tentatives).\n\n");
+    printf("Le joueur continue de faire des propositions jusqu'a ce qu'il trouve le nombre mystÃ¨re, ou qu'il abandonne, car le programme propose a partir de 100 tentatives d'abandonner a chaque nouvelle mauvaise proposition(mode sans limites de tentatives) ou atteigne le nombre maximum de tentatives autorisees (mode avec limites de tentatives).\n\n");
     printf("Fin du jeu :\n\n");
     printf("a) Mode sans limites de tentatives :\n");
     printf("Le joueur gagne des qu'il trouve le nombre mystere.\n");
-    printf("Le jeu affiche un message de félicitations au joueur.\n\n");
+    printf("Le jeu affiche un message de fÃ©licitations au joueur.\n\n");
     printf("b) Mode avec limites de tentatives :\n\n");
-    printf("Si le joueur épuise toutes ses tentatives sans trouver le nombre mystere, il perd.\n");
-    printf("Le jeu affiche un message indiquant que le joueur a perdu et révèle le nombre mystere.\n\n");
+    printf("Si le joueur Ã©puise toutes ses tentatives sans trouver le nombre mystere, il perd.\n");
+    printf("Le jeu affiche un message indiquant que le joueur a perdu et rÃ©vÃ¨le le nombre mystere.\n\n");
 
     printf("\t\t\t Pour retourner au MENU entrez 1\n\n");
     scanf("%d", &back_menu);
@@ -36,6 +39,7 @@ void regles()
 
 }
 
+// fonction JEU SANS LIMITE DE TENTATIVES
 
 void jeu_sans_limit()
 {
@@ -57,7 +61,7 @@ void jeu_sans_limit()
 
     do
     {
-        // génération d'un nomnre aléatoire
+        // gÃ©nÃ©ration d'un nomnre alÃ©atoire
        srand(time(NULL));
        nombre_mystere = (rand()% (MAX_VAL-MIN_VAL +1)) + MIN_VAL;
 
@@ -74,7 +78,7 @@ void jeu_sans_limit()
         {
 
 
-            // Comparaisons du nombre de l'utilisateur avec le nombre mystère
+            // Comparaisons du nombre de l'utilisateur avec le nombre mystÃ¨re
 
 
              printf("Votre proposition : \n");
@@ -144,6 +148,7 @@ void jeu_sans_limit()
 
 }
 
+//fonction JEU AVEC LIMITE DE TENTATIVES
 
 void jeu_avec_limit()
 {
@@ -163,7 +168,7 @@ void jeu_avec_limit()
 
     do
     {
-        // génération d'un nomnre aléatoire
+        // gÃ©nÃ©ration d'un nomnre alÃ©atoire
        srand(time(NULL));
        nombre_mystere = (rand()% (MAX_VAL-MIN_VAL +1)) + MIN_VAL;
 
@@ -181,7 +186,7 @@ void jeu_avec_limit()
         {
 
 
-            // Comparaisons du nombre de l'utilisateur avec le nombre mystère
+            // Comparaisons du nombre de l'utilisateur avec le nombre mystÃ¨re
 
 
 
@@ -241,6 +246,8 @@ void jeu_avec_limit()
     printf(" A bientot");
 
 }
+
+// fonction MAIN
 
 int main()
 {
